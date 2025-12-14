@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote Validator</title>
+  </head>
+  <body>
+    <div>
+      <h1>Vote Validator</h1>
+
+      <label>Name</label>
+      <input type="text" id="name" placeholder="name" />
+      <br /><br />
+
+      <label>Age</label>
+      <input type="number" id="age" placeholder="age" class="baigan" />
+      <br /><br />
+
+      <button onclick="vote()">Submit</button>
+      <p id="par"></p>
+    </div>
+
+    <style>
+      #par {
+        background-color: #fff;
+        color: black;
+        display: block;
+        width: auto;
+        max-width: 90%;
+        padding: 8px 12px;
+        border-radius: 10px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+      body {
+        background-image: url("A-Trial-for-Institutional-Sanctity.jpg");
+        align-items: center;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+      }
+
+      div {
+        width: 500px;
+        height: 250px;
+        backdrop-filter: blur(10px);
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 10px;
+        position: relative; /* needed so #par can be absolutely centered inside */
+        padding: 16px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #fff;
+        color: black;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: rgb(245, 232, 152);
+      }
+      .baigan {
+        margin-top: 25px;
+      }
+    </style>
+    <script src="vote.js"></script>
+  </body>
+</html>

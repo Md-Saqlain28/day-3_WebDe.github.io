@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>RESULT PREDICTOR</h1>
+      <form action="">
+        <label for="">Name</label>
+        <input type="text" placeholder="enter your name" id="name"/>
+        <br></br>
+      </form>
+      <button onclick="exam()">Check Result</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      function exam() {
+        var name = document.getElementById("name").value;
+        var marks = Math.floor(Math.random() * 101);
+        var resulttext = "";
+        var resultclass = "";
+
+        if (marks < 35) {
+          resulttext = name + " failed";
+        } else if (marks >= 80) {
+          resulttext = name + " passed with distinction";
+        } else if (marks >= 60) {
+          resulttext = name + " passed with first class";
+        } else if (marks >= 50) {
+          resulttext = name + " passed with secont class";
+        } else {
+          resulttext = name + " passed(just pass)";
+        }
+        var resultpara = document.getElementById("result");
+        resultpara.innerHTML = resulttext;
+        resultpara.className = resultclass;
+      }
+    </script>
+    <style>
+      body {
+        background-image: url("exam.jpg");
+        background-size: cover;
+        background-color: cornflowerblue;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+      }
+      div {
+        width: 550px;
+        height: 250px;
+        backdrop-filter: blur(10px);
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+      }
+      #para {
+        background-color: burlywood;
+        color: black;
+      }
+      button {
+        color: black;
+        border: 2px solid green;
+        border-radius: 2px;
+        height: 30px;
+      }
+      button:hover {
+        background-color: green;
+      }
+      h1 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      label {
+        background-color: #fff;
+        margin-right: 5px;
+        border: 2px solid skyblue;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        width: 30px;
+      }
+      input {
+        border: 2px solid skyblue;
+      }
+    </style>
+  </body>
+</html>
